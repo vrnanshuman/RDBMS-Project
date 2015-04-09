@@ -4,7 +4,7 @@
  */
 package inventory.manager;
 import java.sql.*;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 /**
  *
  * @author Mahe
@@ -37,10 +37,12 @@ public class RecordPurchase extends javax.swing.JFrame {
                     break;
                 }
             }
+            
             if(found) getUniqueID();
             jTextField2.setText(s);
             stmt.close();
             c.close();
+            
         }
         catch(Exception ex)
         {
@@ -180,6 +182,7 @@ public class RecordPurchase extends javax.swing.JFrame {
             stmt.close();
             c.close();
             this.setVisible(false);
+            javax.swing.JOptionPane.showMessageDialog(null,"Purchase successful");
         }
         catch(Exception e)
         {

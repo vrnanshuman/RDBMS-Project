@@ -44,6 +44,7 @@ public class RecordSale extends javax.swing.JFrame {
             jTextField2.setText(s);
             stmt.close();
             c.close();
+            
         }
         catch(Exception ex)
         {
@@ -195,6 +196,7 @@ public class RecordSale extends javax.swing.JFrame {
                 {
                    stmt.executeUpdate("delete from sale where sale_id="+jTextField2.getText());
                 }
+                javax.swing.JOptionPane.showMessageDialog(null,"Sale successful");
             }
             stmt.close();
             c.close();
